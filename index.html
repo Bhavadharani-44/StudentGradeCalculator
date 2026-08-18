@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grade Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Student Grade Calculator</h1>
+    <p class="subtitle">Enter the marks for five subjects to calculate the result.</p>
+
+    <!-- The form holds all the inputs. Using a form lets the browser
+         handle the Enter key and gives us a single submit event.
+         "novalidate" switches off the browser's own pop-up warnings so
+         our JavaScript checks in script.js do all the validating and
+         every message appears in the same place on the page. -->
+    <form id="gradeForm" novalidate>
+
+      <div class="field">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" placeholder="e.g. Priya Sharma">
+      </div>
+
+      <h2>Subject Marks (0 - 100)</h2>
+
+      <div class="field">
+        <label for="subject1">Subject 1</label>
+        <input type="number" id="subject1" class="mark" min="0" max="100" placeholder="0 - 100">
+      </div>
+
+      <div class="field">
+        <label for="subject2">Subject 2</label>
+        <input type="number" id="subject2" class="mark" min="0" max="100" placeholder="0 - 100">
+      </div>
+
+      <div class="field">
+        <label for="subject3">Subject 3</label>
+        <input type="number" id="subject3" class="mark" min="0" max="100" placeholder="0 - 100">
+      </div>
+
+      <div class="field">
+        <label for="subject4">Subject 4</label>
+        <input type="number" id="subject4" class="mark" min="0" max="100" placeholder="0 - 100">
+      </div>
+
+      <div class="field">
+        <label for="subject5">Subject 5</label>
+        <input type="number" id="subject5" class="mark" min="0" max="100" placeholder="0 - 100">
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn-primary">Calculate</button>
+        <button type="button" id="resetBtn" class="btn-secondary">Reset</button>
+      </div>
+
+    </form>
+
+    <!-- Validation messages appear here -->
+    <p id="errorMessage" class="error hidden"></p>
+
+    <!-- The result block starts hidden and is filled in by JavaScript -->
+    <div id="result" class="result hidden">
+      <h2>Result</h2>
+      <p><strong>Name:</strong> <span id="outName"></span></p>
+      <p><strong>Total:</strong> <span id="outTotal"></span> / 500</p>
+      <p><strong>Average:</strong> <span id="outAverage"></span>%</p>
+      <p class="grade-line"><strong>Grade:</strong> <span id="outGrade"></span></p>
+      <p><strong>Status:</strong> <span id="outStatus"></span></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* ---- Basic page setup ---- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eef2f7;
+  margin: 0;
+  padding: 30px 15px;
+  color: #333333;
+}
+
+/* ---- The white card that holds everything ---- */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 25px 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777777;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 16px;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+  margin-top: 25px;
+}
+
+/* ---- Form fields ---- */
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 9px 10px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* keeps padding inside the 100% width */
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Highlights an input that failed validation */
+input.invalid {
+  border-color: #e74c3c;
+  background-color: #fdf0ef;
+}
+
+/* ---- Buttons ---- */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 11px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #2c81ba;
+}
+
+.btn-secondary {
+  background-color: #dfe4ea;
+  color: #333333;
+}
+
+.btn-secondary:hover {
+  background-color: #ccd2da;
+}
+
+/* ---- Error message ---- */
+.error {
+  margin-top: 18px;
+  padding: 10px 12px;
+  background-color: #fdecea;
+  border-left: 4px solid #e74c3c;
+  color: #a93226;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* ---- Result box ---- */
+.result {
+  margin-top: 22px;
+  padding: 15px 18px;
+  background-color: #f4f9f4;
+  border-left: 4px solid #27ae60;
+  border-radius: 4px;
+}
+
+.result h2 {
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.result p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.grade-line span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Utility class used by JavaScript to show/hide blocks */
+.hidden {
+  display: none;
+}
